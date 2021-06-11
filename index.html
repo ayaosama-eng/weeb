@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+      <style>
+          * {
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+  
+    #h1 {
+
+      background-color: beige;
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      padding:20px;
+    }
+    .father {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+background-color: bisque;
+    }
+    .div1 {
+background-color: blue;
+width: 90px;
+height: 50px;
+padding: 10px;
+text-align: center;
+
+    }
+    .div2 {
+background-color: green;
+width: 90px;
+height: 50px;
+padding: 10px;
+text-align: center;
+
+    }
+    .div3 {
+background-color:peru;
+width: 90px;
+height: 50px;
+padding: 10px;
+text-align: center;
+
+    }
+    .div4 {
+background-color:red;
+width: 70px;
+height: 50px;
+padding: 10px;
+text-align: center;
+
+    }
+    .div5 {
+background-color:blueviolet;
+width: 70px;
+height: 50px;
+padding: 10px;
+text-align: center;
+
+    }
+    .div6 {
+background-image: linear-gradient(to left,blue,white);
+width: 70px;
+height: 50px;
+padding: 10px;
+text-align: center;
+
+    }
+    @media  (max-width: 500px) {
+    .father {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 500px;
+        
+
+    }
+  </style>
+<body>
+  <h1 id="h1"> Aya Restaurant wishes you a good taste</h1>
+  <h3>please fill this form:</h3>
+
+<form id="myform" action="index.html" method="post" onsubmit="return validation()" autocomplete="on"
+action = "page1.html">
+
+    
+                <div class="inputBox">
+                    <input name="fname" type="text" placeholder="First name" id="user" class="control" required><br><br>
+                    <input name="lname" type="text" placeholder="last name" id="user2" class="control" required><br><br>
+                    <input name="email" type="email" id="email" class="control" placeholder="email" required><br><br>
+                    <input  name="number" type="tel" id="mobile" class="control" placeholder="mobile phone number"  maxlength="11"  required><br><br>
+ <input  name="password"type="text" id ="pass" class="control" placeholder="password" required><br><br>
+ <input name="passward" type="text" placeholder="confirm password" id="conpass" class="control" ><br><br>
+               
+    
+                <textarea placeholder="address" name="address" id="" cols="10" rows="5" required></textarea><br><br>
+                
+            <select id="gender" name="gender" >
+      <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br><br>
+    
+ <input type="submit" value=" submit" class="btn" id="submit" >
+    
+            </form>
+    
+        </div>
+        <h4>our page on social media: </h4>
+        <div class="father">
+
+          <div class="div1">facebook </div>
+          <div class="div2">whatsApp </div>
+          <div class="div3">instagram </div>
+          <div class="div4">Google </div>
+          <div class="div5">in </div>
+          <div class="div6">tiwitter </div>
+
+
+
+        </div>
+    
+<script>
+   
+
+function validation(){
+  // store the value that user enter in variables
+  var user = document.getElementById('user').value;
+  var user2 =  document.getElementById('user2').value;
+  var pass = document.getElementById('pass').value;
+  var conpass = document.getElementById('conpass').value;
+  var email = document.getElementById('email').value;
+  var mobile = document.getElementById('mobile').value;
+ var first=pass.substr(0,1);
+  
+
+  
+ 
+ //  to accert a name of 3 letters at least
+  if(user.length<3){
+      alert("*first Name must be more than 2 letters*");
+      return false;
+  }
+  else if (!(first.match(/[A-Z]/))){
+  alert ("should strat with upper casas");
+  return false;
+  
+  }
+  else if(user2.length<3){
+    alert("*last Name must be more than 2 letters*");
+    return false;
+}
+   else if(mobile.length!=11){
+    alert("*please enter a valid number*");
+    return false;
+}
+  
+  
+  
+  else if(pass.search(/[ ]/)!=-1){
+     alert("**must not include a space**");
+  return false;
+ }
+  // limit the lenght of the  pass
+  else if(pass.length != 8 ){
+    alert("**please write a passward of 8 no long no less**");
+      return false;
+  }
+    // must enclud numbers
+ else if(pass.search(/[0-9]/)==-1){
+      
+      alert("must incluce at least a number");
+      return false;
+  }
+  //not to accept without upper characters
+  else if(pass.search(/[A-Z]/)==-1){
+alert("**must include at leasrt 1 upper character**");
+      return false;
+  }
+  // not to accept without lower characters
+ else if(pass.search(/[a-z]/)==-1){
+      alert("**must include at least 1 lowwer character**");
+  return false;
+ }
+  // not accept without special characters
+  else if(pass.search(/[!\@\#\$\%\^\&\*\(\)\_\-\=\+\<\>\,\?]/)==-1){
+     
+         alert("**must include 1 special character**");
+      return false;
+     }
+  
+  else if(conpass != pass){
+      alert("**passward isnot matches");
+      return false;
+  
+  }
+ 
+    else if(email.indexOf("@") == -1 || email.length < 6){
+    alert("**Please Enter valid Email**");
+     return false;
+}
+ else{
+    alert("welcome to you in our restorant ");
+ }
+
+  
+}
+
+
+
+</script>
+
+</body>
+</html> 

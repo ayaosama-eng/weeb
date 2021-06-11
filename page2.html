@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.father {
+    display: flex;
+    flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-between;
+}
+.contain{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+
+}
+
+.contain > div{
+  
+  background-color:tan;
+  height: 50px;
+  width: 130px;
+  text-align: center;
+  font-size: 30px;
+  align-self: center;
+}
+/* Style the header */
+header {
+  background-color:bisque;
+  text-align: center;
+  font-size: 35px;
+  color:hotpink;
+  height: 60px;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background:sandybrown;
+  padding: 20px;
+  
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+li {
+    background-color: blanchedalmond;
+  height: 70px;
+  width: 70px;
+  padding: 40px;
+  margin: 40px;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+  height: 100%;
+}
+footer {
+  background-color: sandybrown;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+/* Style the footer */
+
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 500px) {
+  section {
+    -webkit-flex-direction: column;
+  }
+  .contain{
+
+      
+      display: flex;
+       flex-direction: column;
+       flex-wrap: nowrap;
+        }
+        header {
+        padding: 40px;
+          height: 250px;
+        }
+}
+</style>
+</head>
+<body>
+
+
+
+<header>
+    <div class="contain"> 
+        
+        <div>
+            <a href="page2.html" class="a1">breakfast</a>
+
+        </div>
+        <div>
+            <a href="page3.html" class="a2">meal</a>
+
+        </div>
+        <div>
+            <a href="page4.html" class="a3">Dessert</a>
+
+        </div>
+        <div>
+            <a href="page5.html" class="a4">Drinks</a>
+
+        </div>
+        
+    </div>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#cheese">depart of cheese</a></li>
+      <li><a href="#beaker">beaker</a></li>
+      <li><a href="#others">Diverse food</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+      <div class="father">
+          <div>
+    <img src="chesse1.jpg" width="70px" height="70px" id="cheese" style="padding: 30px;"> 
+    <p>white cheese</p>
+    <p>20</p>
+          </div>
+    <div>
+        <img src="cheese2.jpg" width="70px" height="70px" id="cheese"style="padding: 30px;"> 
+        <p>Roomi cheese</p>
+        <p>15</p>
+    </div>
+        <div>
+            <img src="cheese3.jpg" width="70px" height="70px" id="cheese"style="padding: 30px;"> 
+            <p>cheddar cheese</p>
+            <p>30</p>
+        </div>
+            <div>
+                <img src="cheese4.jpg" width="70px" height="70px" id="cheese"style="padding: 30px;"> 
+                <p>white cheese</p>
+                <p>25</p>
+            </div>
+                <div>
+                    <img src="chesse5.jpg" width="70px" height="70px" id="cheese"style="padding: 30px;"> 
+                    <p>Neston cheese</p>
+                    <p>20</p>
+</div>
+<br>
+<br>
+<div>
+                
+                    <img src="b1.jpg" width="70px" height="70px" id="beaker"style="padding: 30px;"> 
+    <p>croissant</p>
+    <p>15</p>
+          </div>
+    <div>
+        <img src="b2.jpg" width="70px" height="70px"style="padding: 30px;" > 
+        <p>fino</p>
+        <p>23</p>
+    </div>
+        <div>
+            <img src="b3.jpg" width="70px" height="70px"style="padding: 30px;" > 
+            <p>fino with wheat</p>
+            <p>21</p>
+        </div>
+            <div>
+                <img src="b4.jpg" width="70px" height="70px"style="padding: 30px;" > 
+                <p>bakery</p>
+                <p>11</p>
+            </div>
+                <div>
+                    <img src="p5.jpg" width="70px" height="70px"style="padding: 30px;" > 
+                    <p>bakery</p>
+                    <p>10</p>
+</div>
+<div>
+    <img src="b6.jpg" width="70px" height="70px" style="padding: 30px;"> 
+    <p>chocolate </p>
+    <p>15</p>
+</div>
+<div>
+    <img src="b7.jpg" width="70px" height="70px" id="others" style="padding: 30px;"> 
+    <p>falafel</p>
+    <p>18</p>
+</div>
+<div>
+    <img src="b8.jpg" width="70px" height="70px"style="padding: 30px;" > 
+    <p>luncheon</p>
+    <p>41</p>
+</div>
+<div>
+    <img src="b9.jpg" width="70px" height="70px"style="padding: 30px;" > 
+    <p>potatos</p>
+    <p>19</p>
+</div>
+<div>
+    <img src="b10.jpg" width="70px" height="70px" style="padding: 30px;"> 
+    <p>eggs</p>
+    <p>13</p>
+</div>
+<div>
+    <img src="b11.jpg" width="70px" height="70px"style="padding: 30px;" > 
+    <p>eggsplant</p>
+    <p>22</p>
+</div>
+<div>
+    <img src="b12.jpg" width="70px" height="70px"style="padding: 30px;" > 
+    <p>bean</p>
+    <p>31</p>
+</div><div>
+    <img src="b13.jpg" width="70px" height="70px"style="padding: 30px;" > 
+    <p>omelette</p>
+    <p>10</p>
+</div>
+<div>
+    <img src="b15.jpg" width="70px" height="70px"style="padding: 30px;" > 
+    <p>pickled</p>
+    <p>15</p>
+</div>
+</div>
+  </article>
+
+</section>
+<footer>
+  <p><a href="page1.html"> click here to return home</a></p>
+</footer>
+
+
+</body>
+</html>
+
+    </style>
+    <body>
+
+    </body>
+</html>
